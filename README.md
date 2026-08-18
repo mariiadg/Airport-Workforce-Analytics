@@ -44,6 +44,7 @@
 `flights`  · `shift_flights` · `flight_assignments` 
 
 Все внешние ключи настроены, связи отображены на ER-диаграмме в MySQL Workbench.
+![ER-диаграмма](Images/DB_ER_diagram.png)
 
 ## Метрики и гипотезы
 ### Блок 1: Нагрузка и эффективность агентов
