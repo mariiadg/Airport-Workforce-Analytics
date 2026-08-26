@@ -38,6 +38,9 @@
 
 ## Архитектура базы данных
 База данных спроектирована с нуля с учетом бизнес-логики аэропорта и построена по схеме **«Снежинка» (Snowflake Schema)**.
+
+SQL-запросы для создания базы данных: [create_db.sql](SQL/Creation_and_validation/create_db.sql) 
+
 ### Справочники
 `agents` · `airlines` · `destinations` · `dcs` · `aircraft_types` · `flight_types` · `check_in_desks` · `shifts`
 ### Операционные таблицы
