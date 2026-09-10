@@ -20,7 +20,7 @@
 | 6 | Привлечение Extra-агентов оправдано, но несмотря на это, 62% рейсов не хватает персонала |
 | 7 | Различия между топ-5 и боттом-5 агентами статистически значимы (Mann-Whitney U-test, p < 0.05) |
 
-![Общий вид дашборда](Images/dashboard_overview.png)
+![Общий вид дашборда](Images/01_Overview.png)
 ## Технологический стек
 `MySQL` · `SQL` · `Python (pandas, scipy, matplotlib, seaborn)` · `Jupyter` · `Power BI` · `Excel` 
 ## Данные
