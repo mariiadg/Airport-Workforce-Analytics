@@ -9,7 +9,7 @@ USE sopp;
 CREATE TABLE agents (
     agent_id INT AUTO_INCREMENT PRIMARY KEY,
     agent_name VARCHAR(10) NOT NULL,
-    agent_role VARCHAR(10),
+    agent_role VARCHAR(20),
     agent_type VARCHAR(10)
 );
 
@@ -29,7 +29,7 @@ CREATE TABLE dcs (
 );
 
 -- Типы воздушных судов
-CREATE TABLE aircraft_type (
+CREATE TABLE aircraft_types (
     aircraft_type_id INT AUTO_INCREMENT PRIMARY KEY,
     manufacturer VARCHAR(20),
     model VARCHAR(10),
@@ -37,7 +37,7 @@ CREATE TABLE aircraft_type (
 );
 
 -- Типы рейсов
-CREATE TABLE flight_type (
+CREATE TABLE flight_types (
     flight_type_id INT AUTO_INCREMENT PRIMARY KEY,
     flight_type_name VARCHAR(20)
 );
@@ -100,8 +100,8 @@ CREATE TABLE shift_flights (
     check_in_desk_4 INT,
     FOREIGN KEY (shift_id) REFERENCES shifts(shift_id),
     FOREIGN KEY (flight_id) REFERENCES flights(flight_id),
-    FOREIGN KEY (flight_type_id) REFERENCES flight_type(flight_type_id),
-    FOREIGN KEY (aircraft_type_id) REFERENCES aircraft_type(aircraft_type_id),
+    FOREIGN KEY (flight_type_id) REFERENCES flight_types(flight_type_id),
+    FOREIGN KEY (aircraft_type_id) REFERENCES aircraft_types(aircraft_type_id),
     FOREIGN KEY (dcs_id) REFERENCES dcs(dcs_id)
 );
 
@@ -125,7 +125,7 @@ assignment_id INT AUTO_INCREMENT PRIMARY KEY,
 shift_flight_id INT NOT NULL,
 agent_id INT NOT NULL,
 assignment_type ENUM('Check_in', 'Boarding') NOT NULL,
-desk_id INT NULL,
+check_in_desk_id INT NULL,
 FOREIGN KEY (shift_flight_id) REFERENCES shift_flights(shift_flight_id),
 FOREIGN KEY (agent_id) REFERENCES agents(agent_id),
 FOREIGN KEY (desk_id) REFERENCES check_in_desks(check_in_desk_id)
