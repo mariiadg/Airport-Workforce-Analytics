@@ -3,8 +3,8 @@
 // 1. Среднее рейсов за смену
 Avg Flights per Shift =
 DIVIDE(
-    SUM(m1_all_agents[total_flights]),
-    SUM(m1_all_agents[shift_amount]),
+    SUM(m1a[total_flights]),
+    SUM(m1a[shift_amount]),
     BLANK()
 )
 
@@ -12,8 +12,8 @@ DIVIDE(
 // 2. Среднее зарегистрированных пассажиров за смену
 Avg Checked Pax per Shift =
 DIVIDE(
-    SUM(m1_all_agents[ctotal_pax]),
-    SUM(m1_all_agents[shift_amount]),
+    SUM(m1a[ctotal_pax]),
+    SUM(m1a[shift_amount]),
     BLANK()
 )
 
@@ -21,8 +21,8 @@ DIVIDE(
 // 3. Среднее посаженных пассажиров за смену
 Avg Boarded Pax per Shift =
 DIVIDE(
-    SUM(m1_all_agents[btotal_pax]),
-    SUM(m1_all_agents[shift_amount]),
+    SUM(m1a[btotal_pax]),
+    SUM(m1a[shift_amount]),
     BLANK()
 )
 
@@ -31,7 +31,7 @@ DIVIDE(
 Agent Type Short =
 SWITCH(
     TRUE(),
-    SELECTEDVALUE(m1_all_agents[agent_type_ru]) = "Состав смены", "Осн. состав",
-    SELECTEDVALUE(m1_all_agents[agent_type_ru]) = "Дополнительный агент", "Доп. агент",
+    SELECTEDVALUE(m1a[agent_type]) = "Состав смены", "Осн. состав",
+    SELECTEDVALUE(m1a[agent_type]) = "Дополнительный агент", "Доп. агент",
     BLANK()
 )
