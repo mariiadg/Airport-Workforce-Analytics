@@ -3,6 +3,8 @@
 Гипотеза: Сложные и разнообразные рейсы закреплены за узкой группой агентов, остальные работают на ограниченном наборе систем и направлений.
 - Подтверждена.
 
+Запрос: 
+  
 SELECT a.agent_id, a.agent_name, 
 COUNT(DISTINCT dcs.dcs_id) AS dcs_count,
 COUNT(DISTINCT CASE WHEN dcs.dcs_level IN ('Medium', 'Expert') THEN dcs.dcs_id END) AS medcs_count,
