@@ -1,6 +1,9 @@
-5. Пиковые часы.
+6. Пиковые часы.
 Самые загруженные часы по пассажиропотоку в день и в ночь.
-Считаем среднее количество пассажиров за 4 часовые периоды по всем сменам.
+Гипотеза: Распределение нагрузки по пассажиропотоку неравномерно. Максимум пассажиров приходится на ночные часы.
+- Подтверждена.
+
+Запрос:
 
 WITH hourly AS ( -- СТЕ, которое сгруппирует кол-во пассажиров по времени начала регистраций
 SELECT HOUR(check_in_start) AS start_hour,
@@ -16,4 +19,3 @@ LEFT JOIN hourly h1 ON h1.start_hour = (h.start_hour + 1) % 24
 LEFT JOIN hourly h2 ON h2.start_hour = (h.start_hour + 2) % 24
 LEFT JOIN hourly h3 ON h3.start_hour = (h.start_hour + 3) % 24
 ORDER BY avg_pax_per_shift DESC;
-
