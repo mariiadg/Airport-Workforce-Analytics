@@ -26,7 +26,21 @@
 | 7 | Extra-агенты оправданы, но назначаются неравномерно. 62% рейсов не хватает персонала даже с extra, при этом на 2% рейсов избыток |
 | 8 | ... |
 
-![Общий вид дашборда](Images/01_Overview.png)
+<table>
+  <tr>
+    <td><img src="Images/01_Overview.png" width="400" alt="Страница 1"></td>
+    <td><img src="Images/02_Agents_regular.png" width="400" alt="Страница 2"></td>
+  </tr>
+  <tr>
+    <td><img src="Images/03_Agents_extra.png" width="400" alt="Страница 3"></td>
+    <td><img src="Images/04_Rank_and_versatility.png" width="400" alt="Страница 4"></td>
+  </tr>
+  <tr>
+    <td><img src="Images/05_Agents_details.png" width="400" alt="Страница 5"></td>
+    <td><img src="Images/06_Check_in_desks.png" width="400" alt="Страница 6"></td>
+  </tr>
+</table>
+
 ## Технологический стек
 `MySQL` · `SQL` · `Python (pandas, scipy, matplotlib, seaborn)` · `Jupyter` · `Power BI` · `Excel` 
 ## Данные
@@ -93,7 +107,7 @@ SQL-запросы валидации и исправления данных: [v
 | Корреляция Спирмена | | [Spearman.ipynb](Python/Spearman.ipynb) |
 ## Результаты и бизнес-рекомендации
 
-### Визуализация результатов **Дашборд Power BI:** [dashboard.pdf](PowerBI/dashboard.pdf)
+### **Визуализация результатов:** [Дашборд Power BI](PowerBI/dashboard.pdf)
 
 *В файлах* [queries_for_dashboard.sql](SQL/Metrics/queries_for_dashboard.sql) и [DAX_measures.dax](PowerBI/DAX_measures.dax) *собраны SQL-запросы (описательные метрики) и меры, с помощью которых рассчитаны средние, минимальные и максимальные значения по сменам, пассажирам и рейсам, а также топ-10 направлений и типов ВС для последующей визуализации в Power BI.*
 
