@@ -128,7 +128,7 @@ assignment_type ENUM('Check_in', 'Boarding') NOT NULL,
 check_in_desk_id INT NULL,
 FOREIGN KEY (shift_flight_id) REFERENCES shift_flights(shift_flight_id),
 FOREIGN KEY (agent_id) REFERENCES agents(agent_id),
-FOREIGN KEY (desk_id) REFERENCES check_in_desks(check_in_desk_id)
+FOREIGN KEY (check_in_desk_id) REFERENCES check_in_desks(check_in_desk_id)
 );
 
 -- Перенос значений из shift_flights в flight_assignments
